@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+textarea {
+  all: unset;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #130F1A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FDEDF0;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 254px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right, 
+    rgba(195, 20, 50, 0.9), 
+    rgba(36, 11, 54, 0.9)
+    ),
+    url('https://cdn.pixabay.com/photo/2016/11/21/17/41/star-trails-1846734_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.first-heading {
+  font-size: 65px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(253, 237, 240, 0.92);
+  margin-top: 75px;
+  position: relative;
+}
+.fas {
+  position: absolute;
+  font-size: 24px;
+}
+.fas:hover {
+  color: #fff;
+}
+.info {
+  position: absolute;
+  width: 300px;
+  background: #FDEDF0;
+  color: #130F1A;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  border-radius: 10px;
+  top: 105px;
+  left: 60%;
+  z-index: 10;
+
+  transform: scale(0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.info--visible {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.third-heading {
+  margin: 10px 0;
+  font-size: 24px;
+}
+.info > h4 {
+  margin: 10px;
+}
+.info__text {
+  padding: 10px;
+  text-indent: 15px;
+  font-size: 12px;
+}
+
+.first-heading--special {
+  font-weight: 300;
+}
+
+.container {
+  width: 1050px;
+  height: 520px;
+  background-color: #271E34;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 55px;
+  display: flex;
+  overflow: hidden;
+}
+
+.textarea {
+  resize: none;
+  word-wrap: break-word;
+  flex: 2;
+  font: inherit;
+  padding: 30px 40px;
+  font-size: 22px;
+}
+
+.textarea::placeholder {
+  font-weight: 500;
+  color: #FBDAE0;
+  opacity: 0.6;
+}
+
+.stats {
+  flex: 1.3;
+  background-color: #1D1627;
+  display: flex;
+  flex-direction: column;
+}
+.big-stats {
+  flex: 2 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mini-stats {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat {
+  flex: 1 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat:nth-child(1),
+.stat:nth-child(2) {
+  border-bottom: 1px solid rgba(255,255,255, 0.08);
+}
+
+.stat:nth-child(2),
+.stat:nth-child(4) {
+  border-left: 1px solid rgba(255,255,255, 0.08);
+}
+
+.stat__number {
+  color: #FBDAE0;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.stat__number--limit {
+  color: #DC183C;
+}
+
+.second-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #FBDAE0;
+  opacity: 0.4;
+}
+.footer {
+  width: 1050px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.4;
+}
+@media (max-width: 1150px) {
+  .container {
+    width: 85vw;
+    flex-direction: column;
+  }
+
+  .first-heading {
+    font-size: 7vw;
+  }
+
+  .stat {
+    padding: 15px 10px;
+  }
+
+  .stat:nth-child(1),
+  .stat:nth-child(2),
+  .stat:nth-child(4) {
+    border: none;
+  }
+  .mini-stat,
+  .mini-stat:nth-child(1) {
+    border: none;
+  }
+
+  .stat__number {
+    font-size: 20px;
+  }
+  .stats{
+    flex-direction: row;
+  }
+  .mini-stats{
+    flex-direction: column;
+  }
+  .mini-stat {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer {
+    width: initial;
+    flex-direction: column;
+    align-items: center;
+  }
+}
