@@ -32,8 +32,6 @@ const inputHandler = () => {
 
     //set new numbers
     charactersNumberEl.textContent = numberOfCharacters;
-    twitterNumberEl.textContent = twitterCharactersLeft;
-    facebookNumberEl.textContent = facebookCharactersLeft;
     wordsNumberEl.textContent = numberOfWords;
     sentencesNumberEl.textContent = numberOfSentences;
     phrasesNumberEl.textContent = numberOfPhrases;
